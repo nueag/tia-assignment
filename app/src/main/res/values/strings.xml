@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Tia Application</string>
+    <string name="main_defualt_textView">클릭 이벤트</string>
 </resources>
