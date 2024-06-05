@@ -2,6 +2,7 @@ package com.example.tiaapplication;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,6 +50,12 @@ public class SignUpBox extends ConstraintLayout {
         text.setText(text_string);
         String text_hint_string = typedArray.getString(R.styleable.SignUpBox_hint);
         editText.setHint(text_hint_string);
+        String text_input_type = typedArray.getString(R.styleable.SignUpBox_input_type);
+        if(text_input_type.equals("-1")) {
+            editText.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        } else {
+            editText.setInputType(InputType.TYPE_CLASS_TEXT);
+        }
         typedArray.recycle();
 
     }

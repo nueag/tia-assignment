@@ -52,7 +52,8 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     app:hint="@string/edit_text_name_hint"
-                    app:text="@string/edit_text_name" />
+                    app:text="@string/edit_text_name"
+                    app:input_type="0" />
 
                 <android.widget.Button
                     android:layout_width="wrap_content"
@@ -80,7 +81,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
                     app:hint="@string/edit_text_birth_hint"
-                    app:text="@string/edit_text_birth" />
+                    app:text="@string/edit_text_birth"
+                    app:input_type="0"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -120,7 +122,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
                 app:hint="@string/edit_text_phone_hint"
-                app:text="@string/edit_text_phone" />
+                app:text="@string/edit_text_phone"
+                app:input_type="-1"/>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -132,7 +135,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
                     app:hint="@string/edit_text_email_hint"
-                    app:text="@string/edit_text_email" />
+                    app:text="@string/edit_text_email"
+                    app:input_type="0"/>
 
                 <android.widget.Button
                     android:layout_width="wrap_content"
