@@ -30,27 +30,109 @@
                 android:layout_centerInParent="true"
                 tools:ignore="MissingConstraints" />
         </RelativeLayout>
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
             android:layout_below="@+id/title_view">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_default_2"
+                android:textSize="12sp"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:layout_weight="0"
+                android:text="@string/edit_text_name" />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
                 android:paddingStart="10dp"
                 android:fontFamily="@font/notosans_regular_ttf"
                 android:textColor="@color/black"
                 android:textSize="12sp"
-                android:hint="이름을 입력해주세요"
+                android:hint="@string/edit_text_name_hint"
                 android:textColorHint="@color/gray"
-                android:layout_centerInParent="true"
                 android:background="@drawable/login_main_edittext" />
 
-        </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/text_default_2"
+                android:textSize="12sp"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:layout_weight="0"
+                android:text="@string/edit_text_birth" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:hint="@string/edit_text_birth_hint"
+                android:textColorHint="@color/gray"
+                android:background="@drawable/login_main_edittext" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/text_default_2"
+                android:textSize="12sp"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:layout_weight="0"
+                android:text="@string/edit_text_phone" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:hint="@string/edit_text_phone_hint"
+                android:textColorHint="@color/gray"
+                android:background="@drawable/login_main_edittext" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/text_default_2"
+                android:textSize="12sp"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:layout_weight="0"
+                android:text="@string/edit_text_email" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:hint="@string/edit_text_email_hint"
+                android:textColorHint="@color/gray"
+                android:background="@drawable/login_main_edittext" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:hint="@string/edit_text_email_verify"
+                android:textColorHint="@color/gray"
+                android:background="@drawable/login_main_edittext" />
+
+        </LinearLayout>
 
     </RelativeLayout>
 
