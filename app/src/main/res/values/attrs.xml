@@ -1,5 +1,7 @@
 <resources>
-    <declare-styleable name="simple_text_view">
-        <attr name="text" format="string" />
+    <declare-styleable name="SignUpBox">
+        <attr name="text" format="reference|string" />
+        <attr name="hint" format="reference|string" />
     </declare-styleable>
 </resources>
+
