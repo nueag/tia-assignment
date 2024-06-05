@@ -1,19 +1,15 @@
 package com.example.tiaapplication;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowInsetsController;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
-import androidx.core.view.WindowInsetsControllerCompat;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -54,8 +50,9 @@ public class MainActivity extends AppCompatActivity {
 
         //change view button
         changeViewButton.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), EditText.class);
+            Intent intent = new Intent(getApplicationContext(), EditTextView.class);
             startActivity(intent);
+            finish();
         });
     }
     private void setColor(TextView textView, Button btn) {
