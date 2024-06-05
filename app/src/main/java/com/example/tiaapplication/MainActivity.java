@@ -63,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
         } else if(textView.getText().equals("Color : main")) {
             textView.setText("Color : gray");
             btn.setBackgroundColor(gray);
-            btn.setTextColor(black);
+            btn.setTextColor(main);
         } else {
             textView.setText("Color : main");
-            btn.setBackgroundColor(black);
+            btn.setBackgroundColor(main);
             btn.setTextColor(white);
         }
     }
