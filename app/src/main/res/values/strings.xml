@@ -2,4 +2,6 @@
     <string name="app_name">Tia Application</string>
     <string name="main_defualt_textView">클릭 이벤트</string>
     <string name="main_button">버튼</string>
+    <string name="change_view_text">화면 전환</string>
+    <string name="edit_text_title">이용안내</string>
 </resources>

@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="simple_text_view">
+        <attr name="text" format="string" />
+    </declare-styleable>
+</resources>
