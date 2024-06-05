@@ -38,11 +38,25 @@
             android:orientation="vertical"
             android:layout_below="@+id/title_view">
 
-            <com.example.tiaapplication.SignUpBox
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:text="@string/edit_text_name"
-                app:hint="@string/edit_text_name_hint" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp" >
+                <com.example.tiaapplication.SignUpBox
+                    android:id="@+id/name_input_box"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    app:text="@string/edit_text_name"
+                    app:hint="@string/edit_text_name_hint" />
+                <android.widget.Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_spinner"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/name_input_box"/>
+            </RelativeLayout>
 
             <com.example.tiaapplication.SignUpBox
                 android:layout_width="match_parent"

@@ -13,12 +13,12 @@
         <TextView
             android:id="@+id/text_name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:fontFamily="@font/notosans_regular_ttf"
+            android:text="@string/edit_text_name"
             android:textColor="@color/text_default_2"
             android:textSize="12sp"
-            android:fontFamily="@font/notosans_regular_ttf"
-            android:layout_weight="0"
-            android:text="@string/edit_text_name"
             tools:ignore="MissingConstraints" />
         <EditText
             android:id="@+id/text_name_hint"

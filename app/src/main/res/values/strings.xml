@@ -13,4 +13,5 @@
     <string name="edit_text_email">이메일</string>
     <string name="edit_text_email_hint">이메일을 입력해주세요</string>
     <string name="edit_text_email_verify">이메일 인증번호</string>
+    <string name="name_button">내국인</string>
 </resources>
