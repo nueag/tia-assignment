@@ -27,16 +27,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        //titleBar 삭제
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-
         gray = ContextCompat.getColor(this, R.color.gray);
         black = ContextCompat.getColor(this, R.color.black);
         white = ContextCompat.getColor(this, R.color.white);
         main = ContextCompat.getColor(this, R.color.main);
 
         Button button = (Button)findViewById(R.id.button);
+        Button changeViewButton = (Button) findViewById(R.id.change_view_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
             textView.setText("클릭 이벤트");
             btn.setTextColor(black);
             btn.setBackgroundColor(gray);
+        });
+
+        //change view button
+        changeViewButton.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), EditText.class);
+            startActivity(intent);
         });
     }
     private void setColor(TextView textView, Button btn) {
