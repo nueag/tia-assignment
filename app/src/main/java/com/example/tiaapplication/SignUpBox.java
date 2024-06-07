@@ -1,6 +1,9 @@
 package com.example.tiaapplication;
 
+import static android.content.Intent.getIntent;
+
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.text.InputType;
 import android.util.AttributeSet;
@@ -14,8 +17,10 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class SignUpBox extends ConstraintLayout {
-    TextView text;
-    EditText editText;
+    private final String phoneText = "휴대폰 번호";
+    private String hint;
+    private TextView text;
+    private EditText editText;
 
     public SignUpBox(@NonNull Context context) {
         super(context);
@@ -40,6 +45,7 @@ public class SignUpBox extends ConstraintLayout {
         editText = (EditText) findViewById(R.id.text_name_hint);
 
     }
+
     private void getAttrs(AttributeSet attrs) {
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.SignUpBox);
         setTypeArray(typedArray);
@@ -48,25 +54,32 @@ public class SignUpBox extends ConstraintLayout {
     private void setTypeArray(TypedArray typedArray) {
         String text_string = typedArray.getString(R.styleable.SignUpBox_text);
         text.setText(text_string);
-        String text_hint_string = typedArray.getString(R.styleable.SignUpBox_hint);
-        editText.setHint(text_hint_string);
-        String text_input_type = typedArray.getString(R.styleable.SignUpBox_input_type);
-        if(text_input_type.equals("-1")) {
-            editText.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        } else {
+        hint = typedArray.getString(R.styleable.SignUpBox_hint);
+        editText.setHint(hint);
+
+
+        if (!phoneText.equals(text_string)) {
             editText.setInputType(InputType.TYPE_CLASS_TEXT);
         }
         typedArray.recycle();
 
     }
+
     void setText(String text_string) {
         text.setText(text_string);
 
     }
+
     void setText(int text_resID) {
         text.setText(text_resID);
     }
+
     void setEditText(String hint_string) {
         editText.setText(hint_string);
+    }
+
+
+    EditText getEditText() {
+        return this.editText;
     }
 }

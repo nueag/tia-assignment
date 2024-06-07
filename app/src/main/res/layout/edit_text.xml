@@ -23,6 +23,7 @@
                 android:fontFamily="@font/notosans_medium_ttf"
                 android:gravity="center"
                 android:text="@string/edit_text_title"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <android.widget.ImageButton
@@ -52,8 +53,7 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     app:hint="@string/edit_text_name_hint"
-                    app:text="@string/edit_text_name"
-                    app:input_type="0" />
+                    app:text="@string/edit_text_name"/>
 
                 <android.widget.Button
                     android:layout_width="wrap_content"
@@ -81,8 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
                     app:hint="@string/edit_text_birth_hint"
-                    app:text="@string/edit_text_birth"
-                    app:input_type="0"/>
+                    app:text="@string/edit_text_birth"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -117,13 +116,26 @@
                 </LinearLayout>
             </RelativeLayout>
 
-            <com.example.tiaapplication.SignUpBox
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                app:hint="@string/edit_text_phone_hint"
-                app:text="@string/edit_text_phone"
-                app:input_type="-1"/>
+                android:layout_height="wrap_content" >
+
+                <com.example.tiaapplication.SignUpBox
+                    android:id="@+id/phone_number_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    app:hint="@string/edit_text_phone_hint"
+                    app:text="@string/edit_text_phone">
+                </com.example.tiaapplication.SignUpBox>
+
+                <android.widget.Button
+                    android:id="@+id/visible_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="@drawable/visible" />
+            </FrameLayout>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -135,8 +147,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
                     app:hint="@string/edit_text_email_hint"
-                    app:text="@string/edit_text_email"
-                    app:input_type="0"/>
+                    app:text="@string/edit_text_email"/>
 
                 <android.widget.Button
                     android:layout_width="wrap_content"

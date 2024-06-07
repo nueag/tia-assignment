@@ -1,8 +1,13 @@
 package com.example.tiaapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -12,6 +17,7 @@ import android.widget.ImageButton;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+
 public class EditTextView extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -20,6 +26,23 @@ public class EditTextView extends AppCompatActivity {
 
         ImageButton close_btn = (ImageButton)findViewById(R.id.close_btn);
         close_btn.setOnClickListener(v -> finish());
+
+        SignUpBox phoneNumberInput = findViewById(R.id.phone_number_box);
+        phoneNumberInput.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Log.d("test", "input : " + s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
     }
 
     //keyBoard focus out
