@@ -12,7 +12,7 @@ public class Init extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent intent = new Intent(getApplicationContext(), EditTextView.class);
+        Intent intent = new Intent(getApplicationContext(), NestedScrollView.class);
         startActivity(intent);
         finish();
     }

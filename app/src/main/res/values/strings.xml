@@ -16,4 +16,5 @@
     <string name="name_button">내국인</string>
     <string name="edit_text_sub_title">RecyclerView &amp; NestedScrollView 실습</string>
     <string name="new_friend">새로운 친구</string>
+    <string name="user_phone_number">010-0000-0000</string>
 </resources>
