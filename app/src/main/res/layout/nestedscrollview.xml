@@ -54,6 +54,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/friend_bar"
         app:layout_constraintTop_toBottomOf="@+id/new_friend_bar"/>
 
     <TextView

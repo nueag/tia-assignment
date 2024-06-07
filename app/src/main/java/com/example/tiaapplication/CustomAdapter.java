@@ -21,8 +21,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView userName;
-        private TextView phoneNumber;
+        private final TextView userName;
+        private final TextView phoneNumber;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             userName = itemView.findViewById(R.id.user_name_title);
