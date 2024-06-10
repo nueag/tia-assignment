@@ -1,5 +1,8 @@
 package com.example.tiaapplication;
 
+import static android.content.ContentValues.TAG;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +51,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public void onBindViewHolder(@NonNull CustomAdapter.ViewHolder holder, int position) {
         holder.userName.setText(localDataSet.get(position).getName());
         holder.phoneNumber.setText(localDataSet.get(position).getPhoneNumber());
+        Log.d(TAG, "onBindViewHolder: " + position);
     }
 
     @Override
