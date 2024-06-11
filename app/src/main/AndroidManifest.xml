@@ -21,6 +21,7 @@
         </activity>
         <activity android:name=".EditTextView"/>
         <activity android:name=".NestedScrollView"/>
+        <activity android:name=".ChattingRoom" />
 
     </application>
 

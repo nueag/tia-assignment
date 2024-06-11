@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,10 +18,24 @@ import org.w3c.dom.Text;
 import java.util.List;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
-    private List<User> localDataSet;
+    private static List<User> localDataSet;
+    private static OnItemClickListener mListener;
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
+    }
+
+    //custom interface 정의
+    public interface OnItemClickListener {
+        void onItemClick(View v, int position);
+    }
 
     public CustomAdapter(List<User> testDataSet) {
         localDataSet = testDataSet;
+    }
+
+    public User getItem(int position) {
+        return localDataSet.get(position);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -30,6 +45,16 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             super(itemView);
             userName = itemView.findViewById(R.id.user_name_title);
             phoneNumber = itemView.findViewById(R.id.user_phone_number);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int clickPos = getAdapterPosition();
+                    if(clickPos != RecyclerView.NO_POSITION) {
+                        mListener.onItemClick(v, clickPos);
+                    }
+                }
+            });
         }
         public TextView getUserName() {
             return userName;
